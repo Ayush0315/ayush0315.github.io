@@ -1,6 +1,5 @@
 // Footer year
-const yearEl = document.getElementById("year");
-yearEl.textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 // Mobile menu toggle
 const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -10,58 +9,21 @@ hamburgerBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Close menu when clicking a link (mobile UX)
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-  });
+// Close menu on link click
+document.querySelectorAll(".nav-links a").forEach((a) => {
+  a.addEventListener("click", () => navLinks.classList.remove("show"));
 });
 
-// Active link highlight while scrolling
-const sections = document.querySelectorAll("section[id]");
-const navAnchors = document.querySelectorAll(".nav-links a");
-
-function setActiveLink() {
-  let currentSectionId = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-
-    // Offset for sticky navbar height
-    if (window.scrollY >= sectionTop - 140 && window.scrollY < sectionTop + sectionHeight - 140) {
-      currentSectionId = section.getAttribute("id");
-    }
-  });
-
-  navAnchors.forEach((a) => {
-    a.classList.remove("active");
-    const href = a.getAttribute("href");
-    if (href === `#${currentSectionId}`) {
-      a.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", setActiveLink);
-setActiveLink();
-
-/* ===========================
+/* =========================
    Scroll Reveal Animations
-   =========================== */
+   ========================= */
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealEls = document.querySelectorAll(".reveal");
 
-function applyInitialDelays() {
-  revealElements.forEach((el) => {
-    const delay = el.getAttribute("data-delay");
-    if (delay) {
-      el.style.transitionDelay = `${delay}ms`;
-    }
-  });
-}
-
-applyInitialDelays();
+revealEls.forEach((el) => {
+  const delay = el.getAttribute("data-delay");
+  if (delay) el.style.transitionDelay = `${delay}ms`;
+});
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -72,9 +34,54 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.15,
-  }
+  { threshold: 0.16 }
 );
 
-revealElements.forEach((el) => observer.observe(el));
+revealEls.forEach((el) => observer.observe(el));
+
+/* =========================
+   Typing Animation (Hero)
+   ========================= */
+
+const typingText = document.getElementById("typingText");
+
+const roles = [
+  "Python + SQL",
+  "ETL / ELT Pipelines",
+  "Data Modeling + Validation",
+  "AWS + Docker",
+  "Analytics Engineering",
+  "Applied ML Workflows"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeLoop() {
+  const current = roles[roleIndex];
+
+  if (!deleting) {
+    typingText.textContent = current.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === current.length) {
+      deleting = true;
+      setTimeout(typeLoop, 900);
+      return;
+    }
+  } else {
+    typingText.textContent = current.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+
+  const speed = deleting ? 35 : 55;
+  setTimeout(typeLoop, speed);
+}
+
+typeLoop();
