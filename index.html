@@ -9,12 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 </head>
 
 <body>
+  <!-- Animated Background -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
   <!-- Navbar -->
   <header class="navbar">
     <div class="container nav-wrap">
@@ -28,55 +36,79 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">☰</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        ☰
+      </button>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero reveal" id="home" data-reveal="fade-up">
+  <section class="hero" id="home">
     <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="tagline reveal" data-reveal="fade-up" data-delay="0">
-          Data Engineering • Analytics • Applied ML
-        </p>
-
-        <h1 class="reveal" data-reveal="fade-up" data-delay="80">
-          Hi, I’m <span class="accent">Ayush Patil</span>.
-        </h1>
-
-        <p class="subtitle reveal" data-reveal="fade-up" data-delay="160">
-          MS Information Systems @ Northeastern University. I build scalable ETL pipelines,
-          data models, and analytics systems that turn raw data into reliable insights.
-        </p>
-
-        <div class="hero-buttons reveal" data-reveal="fade-up" data-delay="240">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
-          <a class="btn secondary" href="#contact">Contact</a>
+      <div class="hero-left">
+        <div class="chip reveal" data-delay="0">
+          <span class="dot"></span>
+          Open to Data Engineering / Analytics Roles
         </div>
 
-        <div class="socials reveal" data-reveal="fade-up" data-delay="320">
+        <h1 class="hero-title reveal" data-delay="100">
+          Building scalable <span class="accent">data systems</span> <br />
+          and <span class="accent">ML-powered</span> solutions.
+        </h1>
+
+        <p class="hero-sub reveal" data-delay="180">
+          I’m <b>Ayush Patil</b>, a Master’s student at Northeastern University focused on
+          <b>ETL/ELT pipelines</b>, <b>data modeling</b>, and <b>analytics engineering</b>. :contentReference[oaicite:1]{index=1}
+        </p>
+
+        <div class="typing reveal" data-delay="260">
+          <span class="typing-label">I work with:</span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor">|</span>
+        </div>
+
+        <div class="hero-actions reveal" data-delay="340">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+
+        <div class="socials reveal" data-delay="420">
           <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="mailto:patil.ay@northeastern.edu">Email</a>
+          <a href="mailto:patil.ay@northeastern.edu">patil.ay@northeastern.edu</a>
         </div>
       </div>
 
-      <div class="hero-card reveal" data-reveal="fade-up" data-delay="160">
-        <div class="profile-pic">
-          <div class="initials">AP</div>
-        </div>
+      <div class="hero-right reveal" data-delay="180">
+        <div class="glass-card">
+          <div class="profile">
+            <div class="avatar">AP</div>
+            <div class="profile-meta">
+              <p class="name">Ayush Patil</p>
+              <p class="role">Data Engineering • Analytics • ML</p>
+            </div>
+          </div>
 
-        <div class="hero-info">
-          <h3>Quick Info</h3>
-          <ul>
-            <li><b>Location:</b> Boston, MA</li>
-            <li><b>Status:</b> US Citizen</li>
-            <li><b>Degree:</b> MS Information Systems</li>
-            <li><b>Focus:</b> Data Engineering + Analytics</li>
-          </ul>
+          <div class="quick-stats">
+            <div class="stat">
+              <p class="stat-num">45%</p>
+              <p class="stat-text">Reporting efficiency improvement (ETL automation)</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num">5000+</p>
+              <p class="stat-text">Daily events processed in ingestion services</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num">3000+</p>
+              <p class="stat-text">Records analyzed in research pipelines</p>
+            </div>
+          </div>
+
+          <div class="mini-actions">
+            <a class="mini-link" href="#experience">View Experience →</a>
+            <a class="mini-link" href="#skills">View Skills →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -85,95 +117,80 @@
   <!-- About -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title reveal" data-reveal="fade-up">About</h2>
+      <div class="section-head reveal">
+        <h2 class="section-title">About</h2>
+        <p class="section-desc">
+          I enjoy building data workflows that are clean, scalable, and easy for teams to trust and reuse.
+        </p>
+      </div>
 
-      <p class="section-text reveal" data-reveal="fade-up" data-delay="100">
-        I’m a data engineering and analytics-focused graduate student at Northeastern University.
-        I enjoy designing reliable ETL/ELT workflows, building consistent data models and validations,
-        and running large-scale SQL analysis to support product and business decisions.
-      </p>
-
-      <div class="cards">
-        <div class="card reveal" data-reveal="fade-up" data-delay="0">
+      <div class="card-grid">
+        <div class="info-card reveal" data-delay="0">
           <h3>Education</h3>
-          <p>
-            <b>Northeastern University</b> — MS Information Systems
-            <span class="muted">(Expected June 2027)</span>
-          </p>
-          <p class="muted">
-            Coursework: Data Science Engineering Methods and Tools, Program Structure and Algorithms
-          </p>
-          <div class="divider"></div>
-          <p>
-            <b>RNS Institute of Technology</b> — BE Computer Science
-            <span class="muted">(June 2023)</span>
-          </p>
-          <p class="muted">
-            Coursework: Artificial Intelligence and Machine Learning, Big Data Analytics, Statistical Modeling
-          </p>
+          <p class="muted"><b>Northeastern University</b> — MS Information Systems</p>
+          <p class="muted">Expected: June 2027</p>
+          <div class="line"></div>
+          <p class="muted"><b>RNS Institute of Technology</b> — BE Computer Science</p>
+          <p class="muted">Graduated: June 2023</p>
         </div>
 
-        <div class="card reveal" data-reveal="fade-up" data-delay="120">
-          <h3>What I Build</h3>
-          <p class="muted">
-            ETL pipelines, ingestion services, schema design, validations, dashboards, and ML-supported analytics.
-          </p>
+        <div class="info-card reveal" data-delay="120">
+          <h3>Core Focus</h3>
+          <p class="muted">ETL/ELT, ingestion pipelines, SQL analytics, data validation, scalable systems.</p>
         </div>
 
-        <div class="card reveal" data-reveal="fade-up" data-delay="240">
-          <h3>Core Strength</h3>
-          <p class="muted">
-            Turning messy, multi-source data into structured systems with reproducible workflows and strong data quality.
-          </p>
+        <div class="info-card reveal" data-delay="240">
+          <h3>Strength</h3>
+          <p class="muted">Turning messy datasets into structured systems that support real business decisions.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="section dark" id="experience">
+  <section class="section section-alt" id="experience">
     <div class="container">
-      <h2 class="section-title reveal" data-reveal="fade-up">Experience</h2>
-
-      <div class="timeline">
-        <div class="timeline-item reveal" data-reveal="fade-up" data-delay="0">
-          <h3>Chainwise CPA — Data Science & Data Engineering Intern</h3>
-          <p class="meta">Aug 2025 – Dec 2025 · Boston, MA</p>
-          <ul>
-            <li>Developed scalable automated ETL pipelines integrating multi-source operational data, improving reporting efficiency by <b>45%</b>.</li>
-            <li>Built standardized data models, validation rules, and quality checks to ensure consistent datasets for analytics consumption.</li>
-            <li>Performed large-scale SQL analysis to uncover usage patterns and inconsistencies to improve data accessibility.</li>
-            <li>Partnered with stakeholders to translate data requirements into production-ready infrastructure.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item reveal" data-reveal="fade-up" data-delay="140">
-          <h3>Northeastern University — Research Assistant (Applied ML & Data Systems)</h3>
-          <p class="meta">Jan 2025 – Apr 2025 · Boston, MA</p>
-          <ul>
-            <li>Built scalable Python data processing pipelines for noisy semi-structured datasets, reducing runtime by <b>40%</b>.</li>
-            <li>Analyzed patterns across <b>3,000+</b> records using EDA and statistical methods to generate insights.</li>
-            <li>Documented transformations and evaluation results for transparency and reuse.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item reveal" data-reveal="fade-up" data-delay="280">
-          <h3>Dhanyath Technologies — Software Engineering Intern</h3>
-          <p class="meta">Dec 2023 – Jul 2024 · Bangalore, India</p>
-          <ul>
-            <li>Developed backend ingestion services processing <b>5,000+</b> daily events with reliable data flow.</li>
-            <li>Optimized processing logic for ML recommendation workflows, reducing response latency by <b>40%</b>.</li>
-            <li>Collaborated with product and engineering teams to align solutions with evolving platform constraints.</li>
-          </ul>
-        </div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-desc">Impact-driven work across ETL, analytics, and ML pipelines.</p>
       </div>
 
-      <div class="note-box reveal" data-reveal="fade-up" data-delay="120">
-        <h3>Academic Highlight</h3>
-        <p class="muted">
-          <b>Satellite Command Prompt Generator (RAG)</b> — built preprocessing, vectorization, and retrieval pipelines,
-          containerized with Docker and deployed via AWS for scalable experimentation.
-        </p>
+      <div class="timeline">
+        <div class="timeline-card reveal" data-delay="0">
+          <div class="timeline-top">
+            <h3>Chainwise CPA — Data Science & Data Engineering Intern</h3>
+            <span class="pill">Aug 2025 – Dec 2025</span>
+          </div>
+          <ul>
+            <li>Automated scalable ETL pipelines integrating multi-source operational data, improving availability and reporting by <b>45%</b>.</li>
+            <li>Built standardized data models, validation rules, and quality checks for reliable analytics datasets.</li>
+            <li>Performed large-scale SQL analysis to find usage patterns and inconsistencies, improving data accessibility.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card reveal" data-delay="140">
+          <div class="timeline-top">
+            <h3>Northeastern University — Research Assistant (Applied ML & Data Systems)</h3>
+            <span class="pill">Jan 2025 – Apr 2025</span>
+          </div>
+          <ul>
+            <li>Built Python-based data processing pipelines for semi-structured datasets, reducing runtime by <b>40%</b>.</li>
+            <li>Analyzed patterns across <b>3,000+</b> records using EDA + statistical methods to support downstream systems.</li>
+            <li>Documented transformations and assumptions to support transparency and reuse.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card reveal" data-delay="280">
+          <div class="timeline-top">
+            <h3>Dhanyath Technologies — Software Engineering Intern</h3>
+            <span class="pill">Dec 2023 – Jul 2024</span>
+          </div>
+          <ul>
+            <li>Developed ingestion services processing <b>5,000+</b> daily events with reliable data flow.</li>
+            <li>Optimized data processing logic supporting ML recommendation workflows, reducing latency by <b>40%</b>.</li>
+            <li>Collaborated with product + engineering teams to align solutions with platform needs.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -181,84 +198,75 @@
   <!-- Projects -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title reveal" data-reveal="fade-up">Projects</h2>
-      <p class="section-text reveal" data-reveal="fade-up" data-delay="100">
-        A few projects that highlight my work across automation, applied ML, and data systems.
-      </p>
+      <div class="section-head reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Selected projects highlighting engineering + ML depth.</p>
+      </div>
 
       <div class="project-grid">
-        <div class="project-card reveal" data-reveal="fade-up" data-delay="0">
-          <h3>JARVIS (AI Assistant)</h3>
-          <p>Built a JARVIS-style assistant to automate tasks and support user interaction using modular Python components.</p>
+        <a class="project-card reveal" data-delay="0" href="https://github.com/Ayush0315/JARVIS" target="_blank" rel="noopener noreferrer">
+          <div class="project-top">
+            <h3>JARVIS (AI Assistant)</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="muted">A modular Python AI assistant to automate tasks and improve user productivity.</p>
           <div class="tags">
             <span>Python</span><span>Automation</span><span>AI</span>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/Ayush0315/JARVIS" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
+        </a>
 
-        <div class="project-card reveal" data-reveal="fade-up" data-delay="140">
-          <h3>Health Assistant</h3>
-          <p>ML-powered health assistant application designed to support prediction and decision workflows with clean data pipelines.</p>
+        <a class="project-card reveal" data-delay="140" href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">
+          <div class="project-top">
+            <h3>Health Assistant</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="muted">ML-driven health assistant with practical prediction workflows and clean pipeline structure.</p>
           <div class="tags">
-            <span>Python</span><span>Machine Learning</span><span>Data</span>
+            <span>Python</span><span>ML</span><span>Data</span>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
+        </a>
 
-        <div class="project-card reveal" data-reveal="fade-up" data-delay="280">
-          <h3>CIAGAN-DisCo (Privacy + GANs)</h3>
-          <p>Deep generative modeling project focused on disentanglement and anonymization for privacy-preserving learning.</p>
+        <a class="project-card reveal" data-delay="280" href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models" target="_blank" rel="noopener noreferrer">
+          <div class="project-top">
+            <h3>CIAGAN-DisCo (Privacy + GANs)</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="muted">Deep generative modeling for disentanglement and anonymization in privacy-preserving learning.</p>
           <div class="tags">
             <span>Deep Learning</span><span>GAN</span><span>Privacy</span>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="section dark" id="skills">
+  <section class="section section-alt" id="skills">
     <div class="container">
-      <h2 class="section-title reveal" data-reveal="fade-up">Skills</h2>
+      <div class="section-head reveal">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-desc">A compact snapshot of what I use to build data products.</p>
+      </div>
 
-      <div class="skills-grid">
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="0">
+      <div class="skill-grid">
+        <div class="skill-card reveal" data-delay="0">
           <h3>Languages</h3>
           <p class="muted">Python, SQL, C++</p>
         </div>
 
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="90">
+        <div class="skill-card reveal" data-delay="120">
           <h3>Data Engineering</h3>
-          <p class="muted">ETL/ELT, ingestion pipelines, modeling, schema design, data validation</p>
+          <p class="muted">ETL/ELT, ingestion pipelines, modeling, schema design, validation</p>
         </div>
 
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="180">
+        <div class="skill-card reveal" data-delay="240">
           <h3>Analytics</h3>
-          <p class="muted">Large-scale SQL analysis, metrics design, reporting, pattern analysis</p>
+          <p class="muted">SQL analysis, metrics design, analytical reporting, pattern analysis</p>
         </div>
 
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="270">
-          <h3>ML / GenAI</h3>
-          <p class="muted">Applied ML pipelines, evaluation, Retrieval-Augmented Generation</p>
-        </div>
-
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="360">
+        <div class="skill-card reveal" data-delay="360">
           <h3>Cloud & Infra</h3>
           <p class="muted">AWS (S3, Redshift), Docker, Linux, CI/CD</p>
-        </div>
-
-        <div class="skill-card reveal" data-reveal="fade-up" data-delay="450">
-          <h3>Strengths</h3>
-          <p class="muted">Data automation, metadata awareness, documentation, collaboration</p>
         </div>
       </div>
     </div>
@@ -267,26 +275,41 @@
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title reveal" data-reveal="fade-up">Contact</h2>
-      <p class="section-text reveal" data-reveal="fade-up" data-delay="90">
-        If you’re hiring for Data Engineering / Analytics roles, I’d be glad to connect.
-      </p>
-
-      <div class="contact-box reveal" data-reveal="fade-up" data-delay="160">
-        <p><b>Email:</b> <a href="mailto:patil.ay@northeastern.edu">patil.ay@northeastern.edu</a></p>
-        <p><b>Phone:</b> <a href="tel:+18573973023">+1 (857) 397-3023</a></p>
-        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayushrpatil</a></p>
-        <p><b>GitHub:</b> <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">github.com/ayush0315</a></p>
+      <div class="section-head reveal">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-desc">
+          If you’re hiring for Data Engineering or Analytics roles, I’d love to connect.
+        </p>
       </div>
+
+      <div class="contact-card reveal">
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <a href="mailto:patil.ay@northeastern.edu">patil.ay@northeastern.edu</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">Phone</span>
+          <a href="tel:+18573973023">+1 (857) 397-3023</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/ayushrpatil
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="label">GitHub</span>
+          <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">
+            github.com/ayush0315
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Ayush Patil. Built with GitHub Pages.</p>
+      </footer>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Ayush Patil. Built with GitHub Pages.</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
