@@ -9,7 +9,6 @@ hamburgerBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Close menu on link click
 document.querySelectorAll(".nav-links a").forEach((a) => {
   a.addEventListener("click", () => navLinks.classList.remove("show"));
 });
@@ -85,4 +84,42 @@ function typeLoop() {
 }
 
 typeLoop();
+
+/* =========================
+   Crazy Animation:
+   Cursor Glow + Parallax Blobs
+   ========================= */
+
+const cursorGlow = document.getElementById("cursorGlow");
+const blobs = document.querySelectorAll(".blob");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  // show glow once user moves mouse
+  cursorGlow.style.opacity = "1";
+});
+
+function animateGlow() {
+  cursorGlow.style.left = `${mouseX}px`;
+  cursorGlow.style.top = `${mouseY}px`;
+  requestAnimationFrame(animateGlow);
+}
+
+animateGlow();
+
+// Parallax blob movement
+window.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth) - 0.5;
+  const y = (e.clientY / window.innerHeight) - 0.5;
+
+  blobs.forEach((blob) => {
+    const power = Number(blob.getAttribute("data-parallax")) || 12;
+    blob.style.transform = `translate(${x * power}px, ${y * power}px)`;
+  });
+});
 
