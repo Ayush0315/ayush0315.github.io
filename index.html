@@ -15,11 +15,14 @@
 </head>
 
 <body>
+  <!-- Cursor Glow (crazy animation) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
   <!-- Animated Background -->
   <div class="bg">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
+    <div class="blob b1" data-parallax="14"></div>
+    <div class="blob b2" data-parallax="22"></div>
+    <div class="blob b3" data-parallax="18"></div>
     <div class="grid-overlay"></div>
   </div>
 
@@ -52,8 +55,8 @@
         </div>
 
         <h1 class="hero-title reveal" data-delay="110">
-          Building scalable <span class="accent">data systems</span> <br />
-          and <span class="accent">ML-powered</span> solutions.
+          Building scalable <span class="accent shimmer">data systems</span> <br />
+          and <span class="accent shimmer">ML-powered</span> solutions.
         </h1>
 
         <p class="hero-sub reveal" data-delay="190">
@@ -69,7 +72,6 @@
 
         <div class="hero-actions reveal" data-delay="360">
           <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           <a class="btn ghost" href="#contact">Contact</a>
         </div>
 
@@ -81,7 +83,7 @@
       </div>
 
       <div class="hero-right reveal" data-delay="220">
-        <div class="glass-card">
+        <div class="glass-card pulse-border">
           <div class="profile">
             <div class="avatar">AP</div>
             <div class="profile-meta">
@@ -120,7 +122,7 @@
       <div class="section-head reveal">
         <h2 class="section-title">About</h2>
         <p class="section-desc">
-          I enjoy building data workflows that are clean, scalable, and easy for teams to trust and reuse.
+          I enjoy building scalable data workflows that teams can trust and reuse.
         </p>
       </div>
 
@@ -128,7 +130,7 @@
         <div class="info-card reveal" data-delay="0">
           <h3>Education</h3>
           <p class="muted"><b>Northeastern University</b> — MS Information Systems</p>
-          <p class="muted">Expected: May 2026</p>
+          <p class="muted">Expected: June 2027</p>
           <div class="line"></div>
           <p class="muted"><b>RNS Institute of Technology</b> — BE Computer Science</p>
           <p class="muted">Graduated: June 2023</p>
@@ -141,7 +143,7 @@
 
         <div class="info-card reveal" data-delay="240">
           <h3>Strength</h3>
-          <p class="muted">Turning messy datasets into structured systems that support real business decisions.</p>
+          <p class="muted">Turning messy datasets into structured systems that support business decisions.</p>
         </div>
       </div>
     </div>
@@ -162,21 +164,21 @@
             <span class="pill">Aug 2025 – Dec 2025</span>
           </div>
           <ul>
-            <li>Automated scalable ETL pipelines integrating multi-source operational data, improving availability and reporting by <b>45%</b>.</li>
+            <li>Automated scalable ETL pipelines integrating multi-source operational data, improving reporting by <b>45%</b>.</li>
             <li>Built standardized data models, validation rules, and quality checks for reliable analytics datasets.</li>
-            <li>Performed large-scale SQL analysis to find usage patterns and inconsistencies, improving accessibility across teams.</li>
+            <li>Performed large-scale SQL analysis to find usage patterns and inconsistencies.</li>
           </ul>
         </div>
 
         <div class="timeline-card reveal" data-delay="140">
           <div class="timeline-top">
-            <h3>Northeastern University — Research Assistant (Applied ML & Data Systems)</h3>
+            <h3>Northeastern University — Research Assistant</h3>
             <span class="pill">Jan 2025 – Apr 2025</span>
           </div>
           <ul>
-            <li>Built Python-based processing pipelines for semi-structured datasets, reducing runtime by <b>40%</b>.</li>
-            <li>Analyzed patterns across <b>3,000+</b> records using EDA + statistics to support downstream data systems.</li>
-            <li>Documented transformations and evaluation results for transparency and reuse.</li>
+            <li>Built scalable Python pipelines for semi-structured datasets, reducing runtime by <b>40%</b>.</li>
+            <li>Analyzed patterns across <b>3,000+</b> records using EDA and statistics.</li>
+            <li>Documented transformations and assumptions for transparency and reuse.</li>
           </ul>
         </div>
 
@@ -186,9 +188,9 @@
             <span class="pill">Dec 2023 – Jul 2024</span>
           </div>
           <ul>
-            <li>Developed ingestion services processing <b>5,000+</b> daily events with reliable data flow.</li>
-            <li>Optimized logic supporting ML recommendation workflows, reducing end-to-end latency by <b>40%</b>.</li>
-            <li>Collaborated with product + engineering teams to align solutions with evolving requirements.</li>
+            <li>Developed ingestion services processing <b>5,000+</b> daily events.</li>
+            <li>Optimized ML recommendation workflow, reducing latency by <b>40%</b>.</li>
+            <li>Collaborated with engineering teams on scalable solutions.</li>
           </ul>
         </div>
       </div>
@@ -204,38 +206,34 @@
       </div>
 
       <div class="project-grid">
-        <a class="project-card reveal" data-delay="0"
-           href="https://github.com/Ayush0315/JARVIS" target="_blank" rel="noopener noreferrer">
+        <a class="project-card reveal" data-delay="0" href="https://github.com/Ayush0315/JARVIS" target="_blank" rel="noopener noreferrer">
           <div class="project-top">
             <h3>JARVIS (AI Assistant)</h3>
             <span class="arrow">↗</span>
           </div>
-          <p class="muted">A modular Python AI assistant to automate tasks and improve user productivity.</p>
+          <p class="muted">A modular Python AI assistant to automate tasks and improve productivity.</p>
           <div class="tags">
             <span>Python</span><span>Automation</span><span>AI</span>
           </div>
         </a>
 
-        <a class="project-card reveal" data-delay="140"
-           href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">
+        <a class="project-card reveal" data-delay="140" href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">
           <div class="project-top">
             <h3>Health Assistant</h3>
             <span class="arrow">↗</span>
           </div>
-          <p class="muted">ML-driven health assistant with prediction workflows and clean pipeline structure.</p>
+          <p class="muted">ML-driven health assistant with clean pipelines and prediction workflows.</p>
           <div class="tags">
             <span>Python</span><span>ML</span><span>Data</span>
           </div>
         </a>
 
-        <a class="project-card reveal" data-delay="280"
-           href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models"
-           target="_blank" rel="noopener noreferrer">
+        <a class="project-card reveal" data-delay="280" href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models" target="_blank" rel="noopener noreferrer">
           <div class="project-top">
             <h3>CIAGAN-DisCo (Privacy + GANs)</h3>
             <span class="arrow">↗</span>
           </div>
-          <p class="muted">Deep generative modeling for disentanglement and anonymization in privacy-preserving learning.</p>
+          <p class="muted">Disentanglement + anonymization using deep generative models.</p>
           <div class="tags">
             <span>Deep Learning</span><span>GAN</span><span>Privacy</span>
           </div>
@@ -318,4 +316,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
