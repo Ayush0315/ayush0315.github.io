@@ -1,7 +1,6 @@
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Mobile menu toggle
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -12,10 +11,6 @@ hamburgerBtn.addEventListener("click", () => {
 document.querySelectorAll(".nav-links a").forEach((a) => {
   a.addEventListener("click", () => navLinks.classList.remove("show"));
 });
-
-/* =========================
-   Scroll Reveal Animations
-   ========================= */
 
 const revealEls = document.querySelectorAll(".reveal");
 
@@ -38,19 +33,15 @@ const observer = new IntersectionObserver(
 
 revealEls.forEach((el) => observer.observe(el));
 
-/* =========================
-   Typing Animation (Hero)
-   ========================= */
-
 const typingText = document.getElementById("typingText");
 
 const roles = [
-  "Python + SQL",
+  "FastAPI + REST APIs",
   "ETL / ELT Pipelines",
-  "Data Modeling + Validation",
-  "AWS + Docker",
-  "Analytics Engineering",
-  "Applied ML Workflows"
+  "Schema Design + Validation",
+  "AWS S3 + Docker",
+  "Applied ML Workflows",
+  "Secure Data Platforms"
 ];
 
 let roleIndex = 0;
@@ -85,11 +76,6 @@ function typeLoop() {
 
 typeLoop();
 
-/* =========================
-   Crazy Animation:
-   Cursor Glow + Parallax Blobs
-   ========================= */
-
 const cursorGlow = document.getElementById("cursorGlow");
 const blobs = document.querySelectorAll(".blob");
 
@@ -99,8 +85,6 @@ let mouseY = window.innerHeight / 2;
 window.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-
-  // show glow once user moves mouse
   cursorGlow.style.opacity = "1";
 });
 
@@ -112,7 +96,6 @@ function animateGlow() {
 
 animateGlow();
 
-// Parallax blob movement
 window.addEventListener("mousemove", (e) => {
   const x = (e.clientX / window.innerWidth) - 0.5;
   const y = (e.clientY / window.innerHeight) - 0.5;
@@ -122,4 +105,3 @@ window.addEventListener("mousemove", (e) => {
     blob.style.transform = `translate(${x * power}px, ${y * power}px)`;
   });
 });
-
