@@ -631,6 +631,15 @@ body {
   color: rgba(231,234,240,0.62);
   text-align: center;
 }
+.analytics-note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(231,234,240,0.52);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Reveal */
 .reveal {
