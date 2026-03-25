@@ -36,12 +36,12 @@ revealEls.forEach((el) => observer.observe(el));
 const typingText = document.getElementById("typingText");
 
 const roles = [
-  "FastAPI + REST APIs",
+  "Python + SQL",
+  "FastAPI + Agentic AI Workflows",
   "ETL / ELT Pipelines",
-  "Schema Design + Validation",
-  "AWS S3 + Docker",
-  "Applied ML Workflows",
-  "Secure Data Platforms"
+  "LangChain + FAISS + ChromaDB",
+  "Snowflake + Redis + Docker",
+  "MLflow + Prometheus"
 ];
 
 let roleIndex = 0;
@@ -49,6 +49,8 @@ let charIndex = 0;
 let deleting = false;
 
 function typeLoop() {
+  if (!typingText) return;
+
   const current = roles[roleIndex];
 
   if (!deleting) {
@@ -85,12 +87,14 @@ let mouseY = window.innerHeight / 2;
 window.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-  cursorGlow.style.opacity = "1";
+  if (cursorGlow) cursorGlow.style.opacity = "1";
 });
 
 function animateGlow() {
-  cursorGlow.style.left = `${mouseX}px`;
-  cursorGlow.style.top = `${mouseY}px`;
+  if (cursorGlow) {
+    cursorGlow.style.left = `${mouseX}px`;
+    cursorGlow.style.top = `${mouseY}px`;
+  }
   requestAnimationFrame(animateGlow);
 }
 
