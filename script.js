@@ -4,12 +4,16 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const navLinks = document.getElementById("navLinks");
 
-hamburgerBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+if (hamburgerBtn && navLinks) {
+  hamburgerBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+}
 
 document.querySelectorAll(".nav-links a").forEach((a) => {
-  a.addEventListener("click", () => navLinks.classList.remove("show"));
+  a.addEventListener("click", () => {
+    if (navLinks) navLinks.classList.remove("show");
+  });
 });
 
 const revealEls = document.querySelectorAll(".reveal");
@@ -36,12 +40,12 @@ revealEls.forEach((el) => observer.observe(el));
 const typingText = document.getElementById("typingText");
 
 const roles = [
-  "Python + SQL",
-  "FastAPI + Agentic AI Workflows",
-  "ETL / ELT Pipelines",
-  "LangChain + FAISS + ChromaDB",
-  "Snowflake + Redis + Docker",
-  "MLflow + Prometheus"
+  "Python + SQL + Java",
+  "FastAPI + REST API Integration",
+  "RAG + Embeddings + Summarization",
+  "PyTorch + scikit-learn + Forecasting",
+  "AWS + Docker + GitHub Actions",
+  "Monitoring + Drift + Reliability"
 ];
 
 let roleIndex = 0;
