@@ -21,62 +21,6 @@ if (hamburgerBtn && navLinks) {
   });
 }
 
-const themeBtn = document.getElementById("themeBtn");
-const themeMenu = document.getElementById("themeMenu");
-const themeOptions = document.querySelectorAll(".theme-option");
-const THEME_KEY = "portfolio-theme";
-const VALID_THEMES = ["aurora", "sunset", "emerald", "midnight"];
-
-function applyTheme(theme) {
-  if (theme === "aurora") {
-    document.documentElement.removeAttribute("data-theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-
-  themeOptions.forEach((option) => {
-    option.classList.toggle("active", option.dataset.themeName === theme);
-  });
-}
-
-const storedTheme = localStorage.getItem(THEME_KEY);
-applyTheme(VALID_THEMES.includes(storedTheme) ? storedTheme : "aurora");
-
-function closeThemeMenu() {
-  if (!themeMenu) return;
-  themeMenu.classList.remove("show");
-  themeBtn.setAttribute("aria-expanded", "false");
-}
-
-if (themeBtn && themeMenu) {
-  themeBtn.addEventListener("click", (event) => {
-    event.stopPropagation();
-    const isOpen = themeMenu.classList.toggle("show");
-    themeBtn.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  themeOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      const theme = option.dataset.themeName;
-      applyTheme(theme);
-      localStorage.setItem(THEME_KEY, theme);
-      closeThemeMenu();
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!themeMenu.contains(event.target) && !themeBtn.contains(event.target)) {
-      closeThemeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeThemeMenu();
-    }
-  });
-}
-
 const sections = document.querySelectorAll("section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 

@@ -5,26 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Ayush Patil portfolio: data engineering, analytics, applied machine learning, and scalable data systems."
+    content="Ayush Patil portfolio: machine learning, generative AI, applied ML systems, and the data foundations behind them."
   />
-  <title>Ayush Patil | Data Engineering Portfolio</title>
-
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem("portfolio-theme");
-        if (t && t !== "aurora" && ["sunset", "emerald", "midnight"].indexOf(t) !== -1) {
-          document.documentElement.setAttribute("data-theme", t);
-        }
-      } catch (e) {}
-    })();
-  </script>
+  <title>Ayush Patil | Machine Learning Engineer</title>
 
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 </head>
@@ -46,34 +35,6 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <div class="theme-switch">
-          <button
-            class="theme-btn"
-            id="themeBtn"
-            type="button"
-            aria-label="Change color theme"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="themeMenu"
-          >
-            <span class="theme-dot" aria-hidden="true"></span>
-          </button>
-          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Color themes">
-            <button type="button" role="menuitem" data-theme-name="aurora" class="theme-option">
-              <span class="swatch swatch-aurora" aria-hidden="true"></span>Aurora
-            </button>
-            <button type="button" role="menuitem" data-theme-name="sunset" class="theme-option">
-              <span class="swatch swatch-sunset" aria-hidden="true"></span>Sunset
-            </button>
-            <button type="button" role="menuitem" data-theme-name="emerald" class="theme-option">
-              <span class="swatch swatch-emerald" aria-hidden="true"></span>Emerald
-            </button>
-            <button type="button" role="menuitem" data-theme-name="midnight" class="theme-option">
-              <span class="swatch swatch-midnight" aria-hidden="true"></span>Midnight
-            </button>
-          </div>
-        </div>
-
         <button
           class="hamburger"
           id="hamburgerBtn"
@@ -92,11 +53,12 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy reveal" data-reveal="fade-up">
-          <p class="eyebrow">Austin, TX &bull; Data Engineering &bull; Analytics</p>
-          <h1>Data engineer building dependable analytics systems.</h1>
+          <p class="eyebrow">Austin, TX &bull; Machine Learning &bull; AI</p>
+          <h1>Machine learning engineer building <span class="accent">intelligent</span> data products.</h1>
           <p class="hero-lede">
-            I design ETL pipelines, data models, quality checks, and analytics workflows that help
-            teams move from raw operational data to reliable decisions.
+            I design and ship ML and generative-AI systems &mdash; from feature pipelines and model
+            training to retrieval-augmented generation and evaluation &mdash; turning raw data into
+            reliable, intelligent products.
           </p>
 
           <div class="hero-actions">
@@ -108,50 +70,50 @@
           <div class="hero-meta" aria-label="Profile highlights">
             <span>MS Information Systems</span>
             <span>US Citizen</span>
-            <span>Open to data roles</span>
+            <span>Open to AI/ML roles</span>
           </div>
         </div>
 
         <aside class="system-panel reveal" data-reveal="fade-up" data-delay="120" aria-label="Data systems snapshot">
           <div class="panel-top">
             <div>
-              <p class="panel-label">Portfolio Snapshot</p>
-              <h2>Pipeline to insight</h2>
+              <p class="panel-label">ML Snapshot</p>
+              <h2>Data to deployed model</h2>
             </div>
-            <span class="status-pill">Austin</span>
+            <span class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>Austin</span>
           </div>
 
-          <div class="pipeline-flow" aria-label="Data pipeline visual">
+          <div class="pipeline-flow" aria-label="Machine learning lifecycle visual">
             <div class="flow-node">
               <span>01</span>
-              <strong>Ingest</strong>
-              <small>multi-source data</small>
+              <strong>Prepare</strong>
+              <small>feature pipelines</small>
             </div>
             <div class="flow-line"></div>
             <div class="flow-node">
               <span>02</span>
-              <strong>Validate</strong>
-              <small>quality checks</small>
+              <strong>Train</strong>
+              <small>models + tuning</small>
             </div>
             <div class="flow-line"></div>
             <div class="flow-node">
               <span>03</span>
-              <strong>Analyze</strong>
-              <small>SQL + metrics</small>
+              <strong>Deploy</strong>
+              <small>serving + eval</small>
             </div>
           </div>
 
           <div class="signal-grid">
             <div class="signal-card">
-              <span>Reporting lift</span>
-              <strong>45%</strong>
+              <span>Latency cut</span>
+              <strong>40%</strong>
             </div>
             <div class="signal-card">
               <span>Daily events</span>
               <strong>5K+</strong>
             </div>
             <div class="signal-card">
-              <span>Records analyzed</span>
+              <span>Records modeled</span>
               <strong>3K+</strong>
             </div>
           </div>
@@ -169,17 +131,33 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Python</span><i>&bull;</i><span>PyTorch</span><i>&bull;</i><span>TensorFlow</span><i>&bull;</i>
+        <span>Scikit-learn</span><i>&bull;</i><span>Hugging Face</span><i>&bull;</i><span>LLMs</span><i>&bull;</i>
+        <span>RAG</span><i>&bull;</i><span>NLP</span><i>&bull;</i><span>Deep Learning</span><i>&bull;</i>
+        <span>Computer Vision</span><i>&bull;</i><span>MLOps</span><i>&bull;</i><span>Model Evaluation</span><i>&bull;</i>
+        <span>SQL</span><i>&bull;</i><span>AWS</span><i>&bull;</i><span>Docker</span><i>&bull;</i>
+        <span>Python</span><i>&bull;</i><span>PyTorch</span><i>&bull;</i><span>TensorFlow</span><i>&bull;</i>
+        <span>Scikit-learn</span><i>&bull;</i><span>Hugging Face</span><i>&bull;</i><span>LLMs</span><i>&bull;</i>
+        <span>RAG</span><i>&bull;</i><span>NLP</span><i>&bull;</i><span>Deep Learning</span><i>&bull;</i>
+        <span>Computer Vision</span><i>&bull;</i><span>MLOps</span><i>&bull;</i><span>Model Evaluation</span><i>&bull;</i>
+        <span>SQL</span><i>&bull;</i><span>AWS</span><i>&bull;</i><span>Docker</span><i>&bull;</i>
+      </div>
+    </div>
+
     <section class="section about-section" id="about">
       <div class="container section-grid">
         <div class="section-heading reveal" data-reveal="fade-up">
           <p class="section-kicker">About</p>
-          <h2>Practical data systems with a strong analytics backbone.</h2>
+          <h2>Applied machine learning on a strong data foundation.</h2>
         </div>
         <div class="section-copy reveal" data-reveal="fade-up" data-delay="80">
           <p>
-            I&rsquo;m a data engineering and analytics-focused graduate student at Northeastern University.
-            I enjoy designing ETL/ELT workflows, building consistent data models and validations, and
-            running large-scale SQL analysis to support product and business decisions.
+            I&rsquo;m a machine learning&ndash;focused graduate student at Northeastern University.
+            I enjoy building applied ML and generative-AI systems &mdash; feature engineering, model
+            training and evaluation, and retrieval-augmented generation &mdash; backed by the reliable
+            data pipelines that make models work in production.
           </p>
         </div>
       </div>
@@ -202,17 +180,17 @@
 
         <article class="feature-card reveal" data-reveal="fade-up" data-delay="100">
           <span class="card-label">Build</span>
-          <h3>Reliable data foundations</h3>
+          <h3>End-to-end ML systems</h3>
           <p>
-            ETL pipelines, ingestion services, schema design, data validation, dashboards, and ML-supported analytics.
+            Feature pipelines, model training and tuning, retrieval-augmented generation, evaluation, and deployment.
           </p>
         </article>
 
         <article class="feature-card reveal" data-reveal="fade-up" data-delay="200">
           <span class="card-label">Strength</span>
-          <h3>Messy data to trusted insight</h3>
+          <h3>From research to production</h3>
           <p>
-            Turning multi-source data into structured systems with reproducible workflows and clear data quality checks.
+            Taking models from experiments and notebooks to reproducible, evaluated, production-ready systems.
           </p>
         </article>
       </div>
@@ -221,20 +199,20 @@
     <section class="section experience-section" id="experience">
       <div class="container section-heading narrow reveal" data-reveal="fade-up">
         <p class="section-kicker">Experience</p>
-        <h2>Experience across pipelines, analytics, and applied ML.</h2>
+        <h2>Experience across applied ML, generative AI, and data systems.</h2>
       </div>
 
       <div class="container timeline">
         <article class="timeline-item reveal" data-reveal="fade-up">
           <div class="timeline-date">Aug 2025 &ndash; Dec 2025</div>
           <div class="timeline-body">
-            <h3>Chainwise CPA &mdash; Data Science &amp; Data Engineering Intern</h3>
+            <h3>Chainwise CPA &mdash; Data Science &amp; ML Intern</h3>
             <p class="meta">Boston, MA</p>
             <ul>
-              <li>Developed automated ETL pipelines integrating multi-source operational data, improving reporting efficiency by <b>45%</b>.</li>
-              <li>Built standardized data models, validation rules, and quality checks for consistent analytics datasets.</li>
-              <li>Performed large-scale SQL analysis to uncover usage patterns and improve data accessibility.</li>
-              <li>Partnered with stakeholders to translate data requirements into production-ready infrastructure.</li>
+              <li>Built automated data and feature pipelines from multi-source data to power analytics and ML workflows, improving efficiency by <b>45%</b>.</li>
+              <li>Engineered standardized datasets, validation rules, and quality checks to produce reliable training and analytics data.</li>
+              <li>Performed large-scale exploratory analysis to surface usage patterns and inform modeling decisions.</li>
+              <li>Partnered with stakeholders to translate requirements into production-ready data and ML infrastructure.</li>
             </ul>
           </div>
         </article>
@@ -245,9 +223,9 @@
             <h3>Northeastern University &mdash; Research Assistant, Applied ML &amp; Data Systems</h3>
             <p class="meta">Boston, MA</p>
             <ul>
-              <li>Built scalable Python data processing pipelines for noisy semi-structured datasets, reducing runtime by <b>40%</b>.</li>
-              <li>Analyzed patterns across <b>3,000+</b> records using EDA and statistical methods to generate insights.</li>
-              <li>Documented transformations and evaluation results for transparency and reuse.</li>
+              <li>Built scalable Python data and feature-processing pipelines for noisy semi-structured datasets, reducing runtime by <b>40%</b>.</li>
+              <li>Analyzed <b>3,000+</b> records with EDA and statistical methods to engineer features and generate modeling insights.</li>
+              <li>Documented transformations and model evaluation results for transparency and reuse.</li>
             </ul>
           </div>
         </article>
@@ -258,7 +236,7 @@
             <h3>Dhanyath Technologies &mdash; Software Engineering Intern</h3>
             <p class="meta">Bangalore, India</p>
             <ul>
-              <li>Developed backend ingestion services processing <b>5,000+</b> daily events with reliable data flow.</li>
+              <li>Developed backend ingestion services processing <b>5,000+</b> daily events feeding downstream ML recommendation workflows.</li>
               <li>Optimized processing logic for ML recommendation workflows, reducing response latency by <b>40%</b>.</li>
               <li>Collaborated with product and engineering teams to align solutions with evolving platform constraints.</li>
             </ul>
@@ -286,18 +264,18 @@
         </div>
         <div class="section-copy reveal" data-reveal="fade-up" data-delay="80">
           <p>
-            Projects across automation, applied ML, privacy-preserving learning, and data workflows.
+            Projects across generative AI, applied ML, deep learning, and the data systems behind them.
           </p>
         </div>
       </div>
 
       <div class="container project-grid">
         <article class="project-card reveal" data-reveal="fade-up">
-          <span class="project-type">Data Engineering</span>
+          <span class="project-type">Generative AI</span>
           <h3>ReviewPulse AI</h3>
-          <p>Pipeline that ingests product and service reviews from multiple platforms, normalizes them into a shared schema, and enriches them with sentiment and aspect signals for RAG-powered search and analytics.</p>
+          <p>RAG system that ingests reviews from multiple platforms, enriches them with sentiment and aspect signals, and powers semantic search plus a grounded conversational assistant over the results.</p>
           <div class="tags" aria-label="Technologies">
-            <span>PySpark</span><span>Airflow</span><span>FastAPI</span><span>RAG</span>
+            <span>RAG</span><span>NLP</span><span>FastAPI</span><span>PySpark</span>
           </div>
           <a href="https://github.com/BigDataIA-Spring26-Team-1/reviewpulse-ai" target="_blank" rel="noopener noreferrer">View GitHub</a>
         </article>
@@ -333,33 +311,33 @@
     <section class="section skills-section" id="skills">
       <div class="container section-heading narrow reveal" data-reveal="fade-up">
         <p class="section-kicker">Skills</p>
-        <h2>Tools I use to move data from raw to reliable.</h2>
+        <h2>Tools I use to build and ship ML systems.</h2>
       </div>
 
       <div class="container skills-grid">
         <article class="skill-card reveal" data-reveal="fade-up">
+          <h3>Machine Learning</h3>
+          <p>Supervised &amp; unsupervised learning, feature engineering, model training, evaluation</p>
+        </article>
+        <article class="skill-card reveal" data-reveal="fade-up" data-delay="80">
+          <h3>Deep Learning &amp; GenAI</h3>
+          <p>PyTorch, TensorFlow, Transformers, GANs, NLP, Retrieval-Augmented Generation</p>
+        </article>
+        <article class="skill-card reveal" data-reveal="fade-up" data-delay="160">
           <h3>Languages</h3>
           <p>Python, SQL, C++</p>
         </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="80">
-          <h3>Data Engineering</h3>
-          <p>ETL/ELT, ingestion pipelines, modeling, schema design, data validation</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="160">
-          <h3>Analytics</h3>
-          <p>Large-scale SQL analysis, metrics design, reporting, pattern analysis</p>
-        </article>
         <article class="skill-card reveal" data-reveal="fade-up" data-delay="240">
-          <h3>ML / GenAI</h3>
-          <p>Applied ML pipelines, evaluation, Retrieval-Augmented Generation</p>
+          <h3>Data &amp; Pipelines</h3>
+          <p>ETL/ELT, feature pipelines, data modeling, validation, large-scale SQL analysis</p>
         </article>
         <article class="skill-card reveal" data-reveal="fade-up" data-delay="320">
-          <h3>Cloud &amp; Infra</h3>
-          <p>AWS S3, Redshift, Docker, Linux, CI/CD</p>
+          <h3>Cloud &amp; MLOps</h3>
+          <p>AWS S3, Redshift, Docker, Linux, CI/CD, reproducible workflows</p>
         </article>
         <article class="skill-card reveal" data-reveal="fade-up" data-delay="400">
           <h3>Strengths</h3>
-          <p>Data automation, metadata awareness, documentation, collaboration</p>
+          <p>Experimentation, model evaluation, documentation, collaboration</p>
         </article>
       </div>
     </section>
@@ -368,10 +346,10 @@
       <div class="container contact-card reveal" data-reveal="fade-up">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Let&rsquo;s connect about data engineering and analytics roles.</h2>
+          <h2>Let&rsquo;s connect about AI/ML engineering roles.</h2>
           <p>
-            Based in Austin, TX and available for opportunities where data reliability, automation,
-            and analytics quality matter.
+            Based in Austin, TX and available for opportunities where applied machine learning,
+            generative AI, and model quality matter.
           </p>
         </div>
 
