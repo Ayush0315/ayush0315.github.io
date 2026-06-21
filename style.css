@@ -239,9 +239,10 @@ h3,
 .hero h1 {
   max-width: 800px;
   margin-top: 18px;
-  font-size: clamp(46px, 6.4vw, 84px);
-  line-height: 1.02;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.04;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .hero h1 .accent {
@@ -897,7 +898,8 @@ h3,
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 40px;
+    white-space: normal;
   }
 
   .hero-lede {
