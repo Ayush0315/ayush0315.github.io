@@ -9,6 +9,17 @@
   />
   <title>Ayush Patil | Data Engineering Portfolio</title>
 
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("portfolio-theme");
+        if (t && t !== "aurora" && ["sunset", "emerald", "midnight"].indexOf(t) !== -1) {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,24 +37,54 @@
         <span>Ayush Patil</span>
       </a>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-      <button
-        class="hamburger"
-        id="hamburgerBtn"
-        type="button"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-        aria-controls="navLinks"
-      >
-        &#9776;
-      </button>
+        <div class="theme-switch">
+          <button
+            class="theme-btn"
+            id="themeBtn"
+            type="button"
+            aria-label="Change color theme"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="themeMenu"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Color themes">
+            <button type="button" role="menuitem" data-theme-name="aurora" class="theme-option">
+              <span class="swatch swatch-aurora" aria-hidden="true"></span>Aurora
+            </button>
+            <button type="button" role="menuitem" data-theme-name="sunset" class="theme-option">
+              <span class="swatch swatch-sunset" aria-hidden="true"></span>Sunset
+            </button>
+            <button type="button" role="menuitem" data-theme-name="emerald" class="theme-option">
+              <span class="swatch swatch-emerald" aria-hidden="true"></span>Emerald
+            </button>
+            <button type="button" role="menuitem" data-theme-name="midnight" class="theme-option">
+              <span class="swatch swatch-midnight" aria-hidden="true"></span>Midnight
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          &#9776;
+        </button>
+      </div>
     </div>
   </header>
 
