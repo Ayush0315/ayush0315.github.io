@@ -1,26 +1,60 @@
 const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const navLinks = document.getElementById("navLinks");
 
 if (hamburgerBtn && navLinks) {
   hamburgerBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+    const isOpen = navLinks.classList.toggle("show");
+    hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      hamburgerBtn.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
-document.querySelectorAll(".nav-links a").forEach((a) => {
-  a.addEventListener("click", () => {
-    if (navLinks) navLinks.classList.remove("show");
+const sections = document.querySelectorAll("section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+function setActiveLink() {
+  let currentSectionId = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop - 140 && window.scrollY < sectionTop + sectionHeight - 140) {
+      currentSectionId = section.getAttribute("id");
+    }
   });
-});
 
-const revealEls = document.querySelectorAll(".reveal");
+  navAnchors.forEach((anchor) => {
+    anchor.classList.remove("active");
+    if (anchor.getAttribute("href") === `#${currentSectionId}`) {
+      anchor.classList.add("active");
+    }
+  });
+}
 
-revealEls.forEach((el) => {
-  const delay = el.getAttribute("data-delay");
-  if (delay) el.style.transitionDelay = `${delay}ms`;
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
+
+const revealElements = document.querySelectorAll(".reveal");
+
+revealElements.forEach((element) => {
+  const delay = element.getAttribute("data-delay");
+
+  if (delay) {
+    element.style.transitionDelay = `${delay}ms`;
+  }
 });
 
 const observer = new IntersectionObserver(
@@ -32,84 +66,9 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 }
+  {
+    threshold: 0.15,
+  }
 );
 
-revealEls.forEach((el) => observer.observe(el));
-
-const typingText = document.getElementById("typingText");
-
-const roles = [
-  "Python + SQL + Java",
-  "FastAPI + REST API Integration",
-  "RAG + Embeddings + Summarization",
-  "PyTorch + scikit-learn + Forecasting",
-  "AWS + Docker + GitHub Actions",
-  "Monitoring + Drift + Reliability"
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeLoop() {
-  if (!typingText) return;
-
-  const current = roles[roleIndex];
-
-  if (!deleting) {
-    typingText.textContent = current.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === current.length) {
-      deleting = true;
-      setTimeout(typeLoop, 900);
-      return;
-    }
-  } else {
-    typingText.textContent = current.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      deleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-    }
-  }
-
-  const speed = deleting ? 35 : 55;
-  setTimeout(typeLoop, speed);
-}
-
-typeLoop();
-
-const cursorGlow = document.getElementById("cursorGlow");
-const blobs = document.querySelectorAll(".blob");
-
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-
-window.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  if (cursorGlow) cursorGlow.style.opacity = "1";
-});
-
-function animateGlow() {
-  if (cursorGlow) {
-    cursorGlow.style.left = `${mouseX}px`;
-    cursorGlow.style.top = `${mouseY}px`;
-  }
-  requestAnimationFrame(animateGlow);
-}
-
-animateGlow();
-
-window.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth) - 0.5;
-  const y = (e.clientY / window.innerHeight) - 0.5;
-
-  blobs.forEach((blob) => {
-    const power = Number(blob.getAttribute("data-parallax")) || 12;
-    blob.style.transform = `translate(${x * power}px, ${y * power}px)`;
-  });
-});
+revealElements.forEach((element) => observer.observe(element));
