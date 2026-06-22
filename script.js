@@ -13,7 +13,7 @@ if (hamburgerBtn && navLinks) {
     hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
   });
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  document.querySelectorAll("#navLinks a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("show");
       hamburgerBtn.setAttribute("aria-expanded", "false");
@@ -21,31 +21,46 @@ if (hamburgerBtn && navLinks) {
   });
 }
 
-const sections = document.querySelectorAll("section[id]");
-const navAnchors = document.querySelectorAll(".nav-links a");
+const navAnchors = document.querySelectorAll("#navLinks a");
+const pages = document.querySelectorAll(".page[id]");
 
-function setActiveLink() {
-  let currentSectionId = "";
+document.body.classList.add("tabs-enabled");
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
+function showPage(pageId, updateHash = true) {
+  const targetPage = document.getElementById(pageId);
 
-    if (window.scrollY >= sectionTop - 140 && window.scrollY < sectionTop + sectionHeight - 140) {
-      currentSectionId = section.getAttribute("id");
-    }
+  if (!targetPage) {
+    return;
+  }
+
+  pages.forEach((page) => {
+    page.classList.toggle("show", page.id === pageId);
   });
 
   navAnchors.forEach((anchor) => {
-    anchor.classList.remove("active");
-    if (anchor.getAttribute("href") === `#${currentSectionId}`) {
-      anchor.classList.add("active");
-    }
+    const isActive = anchor.getAttribute("href") === `#${pageId}`;
+    anchor.classList.toggle("active", isActive);
   });
+
+  targetPage.querySelectorAll(".reveal").forEach((element) => {
+    element.classList.add("in-view");
+  });
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${pageId}`);
+  }
 }
 
-window.addEventListener("scroll", setActiveLink);
-setActiveLink();
+navAnchors.forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const pageId = anchor.getAttribute("href").slice(1);
+    event.preventDefault();
+    showPage(pageId);
+  });
+});
+
+const initialPage = window.location.hash ? window.location.hash.slice(1) : "about";
+showPage(document.getElementById(initialPage) ? initialPage : "about", false);
 
 const revealElements = document.querySelectorAll(".reveal");
 

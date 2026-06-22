@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Ayush Patil portfolio: machine learning, generative AI, applied ML systems, and the data foundations behind them."
+    content="Ayush Patil portfolio: machine learning, generative AI, applied ML systems, and data engineering."
   />
   <title>Ayush Patil | Machine Learning Engineer</title>
 
@@ -13,25 +13,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;450;500;600;700&display=swap"
     rel="stylesheet"
   />
 </head>
 
 <body>
-  <header class="navbar">
-    <div class="container nav-wrap">
-      <a class="logo" href="#home" aria-label="Ayush Patil home">
-        <span class="logo-mark">AP</span>
-        <span>Ayush Patil</span>
-      </a>
+  <div class="wrap">
+    <header class="site">
+      <div class="head-inner">
+        <a class="brand" href="#about" aria-label="Ayush Patil home">
+          <span class="name">Ayush Patil</span>
+          <span class="sub">Machine Learning Engineer · Austin, TX</span>
+        </a>
 
-      <div class="nav-right">
-        <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <nav class="tabs" id="navLinks" aria-label="Primary navigation">
           <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
+          <a href="#experience">Work</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -46,358 +47,315 @@
           &#9776;
         </button>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal" data-reveal="fade-up" data-delay="80">
-          <p class="eyebrow">Austin, TX &bull; Machine Learning &bull; AI</p>
-          <h1>Machine learning <span class="accent">engineer</span>.</h1>
+    <main>
+      <section class="page about-page show" id="about">
+        <h1 class="page-title reveal" data-reveal="fade-up">Ayush Patil</h1>
+        <div class="title-rule"></div>
 
-          <p class="hero-lede">
-            I design and ship ML and generative-AI systems &mdash; from feature pipelines and model
-            training to retrieval-augmented generation and evaluation &mdash; turning raw data into
-            reliable, intelligent products.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <a class="btn secondary" href="#contact">Contact</a>
+        <div class="about-grid">
+          <div class="avatar-wrap reveal" data-reveal="fade-up" data-delay="80">
+            <div class="avatar">AP</div>
           </div>
 
-          <div class="hero-meta" aria-label="Profile highlights">
-            <span>MS Information Systems</span>
-            <span>US Citizen</span>
-            <span>Open to AI/ML roles</span>
+          <div class="about-text reveal" data-reveal="fade-up" data-delay="120">
+            <p class="greet">Hi, I&rsquo;m Ayush.</p>
+            <p>
+              I build applied machine learning and generative-AI systems backed by reliable data
+              pipelines, clean feature workflows, and practical model evaluation.
+            </p>
+            <p>
+              I&rsquo;m pursuing an MS in Information Systems at <strong>Northeastern University</strong>,
+              with experience across data engineering, applied ML research, backend ingestion systems,
+              and retrieval-augmented generation.
+            </p>
+            <p>
+              My favorite work sits between messy data and usable intelligence: preparing datasets,
+              validating transformations, training models, and making outputs easier for teams to trust.
+            </p>
+
+            <div class="social">
+              <a href="mailto:patil.ay@northeastern.edu">Email</a>
+              <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
           </div>
         </div>
 
-        <aside class="system-panel reveal" data-reveal="fade-up" data-delay="120" aria-label="Data systems snapshot">
-          <div class="panel-top">
-            <div>
-              <p class="panel-label">ML Snapshot</p>
-              <h2>Data to deployed model</h2>
-            </div>
-            <span class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>Austin</span>
-          </div>
-
-          <div class="pipeline-flow" aria-label="Machine learning lifecycle visual">
-            <div class="flow-node">
-              <span>01</span>
-              <strong>Prepare</strong>
-              <small>feature pipelines</small>
-            </div>
-            <div class="flow-line"></div>
-            <div class="flow-node">
-              <span>02</span>
-              <strong>Train</strong>
-              <small>models + tuning</small>
-            </div>
-            <div class="flow-line"></div>
-            <div class="flow-node">
-              <span>03</span>
-              <strong>Deploy</strong>
-              <small>serving + eval</small>
-            </div>
-          </div>
-
-          <div class="signal-grid">
-            <div class="signal-card">
-              <span>Latency cut</span>
-              <strong>40%</strong>
-            </div>
-            <div class="signal-card">
-              <span>Daily events</span>
-              <strong>5K+</strong>
-            </div>
-            <div class="signal-card">
-              <span>Records modeled</span>
-              <strong>3K+</strong>
-            </div>
-          </div>
-
-          <div class="mini-chart" aria-hidden="true">
-            <span style="height: 42%"></span>
-            <span style="height: 62%"></span>
-            <span style="height: 48%"></span>
-            <span style="height: 76%"></span>
-            <span style="height: 58%"></span>
-            <span style="height: 84%"></span>
-            <span style="height: 70%"></span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Python</span><i>&bull;</i><span>PyTorch</span><i>&bull;</i><span>TensorFlow</span><i>&bull;</i>
-        <span>Scikit-learn</span><i>&bull;</i><span>Hugging Face</span><i>&bull;</i><span>LLMs</span><i>&bull;</i>
-        <span>RAG</span><i>&bull;</i><span>NLP</span><i>&bull;</i><span>Deep Learning</span><i>&bull;</i>
-        <span>Computer Vision</span><i>&bull;</i><span>MLOps</span><i>&bull;</i><span>Model Evaluation</span><i>&bull;</i>
-        <span>SQL</span><i>&bull;</i><span>AWS</span><i>&bull;</i><span>Docker</span><i>&bull;</i>
-        <span>Python</span><i>&bull;</i><span>PyTorch</span><i>&bull;</i><span>TensorFlow</span><i>&bull;</i>
-        <span>Scikit-learn</span><i>&bull;</i><span>Hugging Face</span><i>&bull;</i><span>LLMs</span><i>&bull;</i>
-        <span>RAG</span><i>&bull;</i><span>NLP</span><i>&bull;</i><span>Deep Learning</span><i>&bull;</i>
-        <span>Computer Vision</span><i>&bull;</i><span>MLOps</span><i>&bull;</i><span>Model Evaluation</span><i>&bull;</i>
-        <span>SQL</span><i>&bull;</i><span>AWS</span><i>&bull;</i><span>Docker</span><i>&bull;</i>
-      </div>
-    </div>
-
-    <section class="section about-section" id="about">
-      <div class="container section-grid">
-        <div class="section-heading reveal" data-reveal="fade-up">
-          <p class="section-kicker">About</p>
-          <h2>Applied machine learning on a strong data foundation.</h2>
-        </div>
-        <div class="section-copy reveal" data-reveal="fade-up" data-delay="80">
-          <p>
-            I&rsquo;m a machine learning&ndash;focused graduate student at Northeastern University.
-            I enjoy building applied ML and generative-AI systems &mdash; feature engineering, model
-            training and evaluation, and retrieval-augmented generation &mdash; backed by the reliable
-            data pipelines that make models work in production.
-          </p>
-        </div>
-      </div>
-
-      <div class="container feature-grid">
-        <article class="feature-card reveal" data-reveal="fade-up">
-          <span class="card-label">Education</span>
-          <div class="education-list">
-            <div class="institution-row">
-              <div class="org-logo logo-neu" aria-hidden="true">N</div>
-              <div>
-                <h3>Northeastern University</h3>
-                <p>MS Information Systems <span class="muted">(May 2026)</span></p>
-                <p class="muted">
-                  Coursework: Data Science Engineering Methods and Tools, Program Structure and Algorithms
-                </p>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="institution-row">
-              <div class="org-logo logo-rns" aria-hidden="true">RNS</div>
-              <div>
-                <h3>RNS Institute of Technology</h3>
-                <p>BE Computer Science <span class="muted">(June 2023)</span></p>
-                <p class="muted">
-                  Coursework: Artificial Intelligence and Machine Learning, Big Data Analytics, Statistical Modeling
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature-card reveal" data-reveal="fade-up" data-delay="100">
-          <span class="card-label">Build</span>
-          <h3>End-to-end ML systems</h3>
-          <p>
-            Feature pipelines, model training and tuning, retrieval-augmented generation, evaluation, and deployment.
-          </p>
-        </article>
-
-        <article class="feature-card reveal" data-reveal="fade-up" data-delay="200">
-          <span class="card-label">Strength</span>
-          <h3>From research to production</h3>
-          <p>
-            Taking models from experiments and notebooks to reproducible, evaluated, production-ready systems.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section experience-section" id="experience">
-      <div class="container section-heading narrow reveal" data-reveal="fade-up">
-        <p class="section-kicker">Experience</p>
-        <h2>Experience across applied ML, generative AI, and data systems.</h2>
-      </div>
-
-      <div class="container timeline">
-        <article class="timeline-item reveal" data-reveal="fade-up">
-          <div class="timeline-date">Aug 2025 &ndash; Dec 2025</div>
-          <div class="timeline-body">
-            <div class="role-heading">
-              <div class="org-logo logo-chainwise" aria-hidden="true">CW</div>
-              <div>
-                <h3>Chainwise CPA &mdash; Data Science &amp; ML Intern</h3>
-                <p class="meta">Austin, TX</p>
-              </div>
-            </div>
-            <ul>
-              <li>Built automated data and feature pipelines from multi-source data to power analytics and ML workflows, improving efficiency by <b>45%</b>.</li>
-              <li>Engineered standardized datasets, validation rules, and quality checks to produce reliable training and analytics data.</li>
-              <li>Performed large-scale exploratory analysis to surface usage patterns and inform modeling decisions.</li>
-              <li>Partnered with stakeholders to translate requirements into production-ready data and ML infrastructure.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item reveal" data-reveal="fade-up" data-delay="100">
-          <div class="timeline-date">Jan 2025 &ndash; Apr 2025</div>
-          <div class="timeline-body">
-            <div class="role-heading">
-              <div class="org-logo logo-neu" aria-hidden="true">N</div>
-              <div>
-                <h3>Northeastern University &mdash; Research Assistant, Applied ML &amp; Data Systems</h3>
-                <p class="meta">Austin, TX</p>
-              </div>
-            </div>
-            <ul>
-              <li>Built scalable Python data and feature-processing pipelines for noisy semi-structured datasets, reducing runtime by <b>40%</b>.</li>
-              <li>Analyzed <b>3,000+</b> records with EDA and statistical methods to engineer features and generate modeling insights.</li>
-              <li>Documented transformations and model evaluation results for transparency and reuse.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item reveal" data-reveal="fade-up" data-delay="200">
-          <div class="timeline-date">Dec 2023 &ndash; Jul 2024</div>
-          <div class="timeline-body">
-            <div class="role-heading">
-              <div class="org-logo logo-dhanyath" aria-hidden="true">DT</div>
-              <div>
-                <h3>Dhanyath Technologies &mdash; Software Engineering Intern</h3>
-                <p class="meta">Bangalore, India</p>
-              </div>
-            </div>
-            <ul>
-              <li>Developed backend ingestion services processing <b>5,000+</b> daily events feeding downstream ML recommendation workflows.</li>
-              <li>Optimized processing logic for ML recommendation workflows, reducing response latency by <b>40%</b>.</li>
-              <li>Collaborated with product and engineering teams to align solutions with evolving platform constraints.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-
-      <div class="container highlight reveal" data-reveal="fade-up">
-        <div>
-          <span class="card-label">Academic Highlight</span>
-          <h3>Satellite Command Prompt Generator (RAG)</h3>
-        </div>
-        <p>
-          Built preprocessing, vectorization, and retrieval pipelines, then containerized the system with Docker and
-          deployed through AWS for scalable experimentation.
+        <p class="about-wide reveal" data-reveal="fade-up" data-delay="160">
+          Currently based in Austin, TX and open to roles across machine learning engineering,
+          generative AI, applied data systems, and analytics infrastructure.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <section class="section projects-section" id="projects">
-      <div class="container section-grid">
-        <div class="section-heading reveal" data-reveal="fade-up">
-          <p class="section-kicker">Projects</p>
-          <h2>Selected builds that show the range.</h2>
+      <section class="page" id="experience">
+        <h2 class="page-title reveal" data-reveal="fade-up">Work</h2>
+        <div class="title-rule"></div>
+        <p class="page-desc reveal" data-reveal="fade-up" data-delay="80">
+          Experience across applied ML, feature pipelines, analytics, and production data workflows.
+        </p>
+
+        <div class="entry reveal" data-reveal="fade-up">
+          <div class="entry-main">
+            <div class="logo logo-chainwise" aria-hidden="true">CW</div>
+            <div>
+              <h3>Chainwise CPA</h3>
+              <p class="post">Data Science &amp; ML Intern</p>
+              <p class="desc">
+                Built automated data and feature pipelines from multi-source data, improving reporting
+                and analytics efficiency by <strong>45%</strong>. Engineered standardized datasets,
+                validation rules, and quality checks for reliable modeling workflows.
+              </p>
+              <div class="tagrow">
+                <span class="pill p-teal">ETL</span>
+                <span class="pill p-blue">SQL</span>
+                <span class="pill p-gold">Feature Pipelines</span>
+                <span class="pill p-indigo">Analytics</span>
+              </div>
+            </div>
+          </div>
+          <div class="entry-side">
+            <div>Aug 2025 - Dec 2025</div>
+            <div>Austin, TX</div>
+          </div>
         </div>
-        <div class="section-copy reveal" data-reveal="fade-up" data-delay="80">
+
+        <div class="entry reveal" data-reveal="fade-up" data-delay="80">
+          <div class="entry-main">
+            <div class="logo logo-neu" aria-hidden="true">N</div>
+            <div>
+              <h3>Northeastern University</h3>
+              <p class="post">Research Assistant, Applied ML &amp; Data Systems</p>
+              <p class="desc">
+                Built scalable Python data and feature-processing pipelines for noisy semi-structured
+                datasets, reducing runtime by <strong>40%</strong>. Analyzed <strong>3,000+</strong>
+                records with EDA and statistical methods to generate modeling insights.
+              </p>
+              <div class="tagrow">
+                <span class="pill p-blue">Python</span>
+                <span class="pill p-teal">EDA</span>
+                <span class="pill p-indigo">Applied ML</span>
+                <span class="pill p-slate">Documentation</span>
+              </div>
+            </div>
+          </div>
+          <div class="entry-side">
+            <div>Jan 2025 - Apr 2025</div>
+            <div>Austin, TX</div>
+          </div>
+        </div>
+
+        <div class="entry reveal" data-reveal="fade-up" data-delay="160">
+          <div class="entry-main">
+            <div class="logo logo-dhanyath" aria-hidden="true">DT</div>
+            <div>
+              <h3>Dhanyath Technologies</h3>
+              <p class="post">Software Engineering Intern</p>
+              <p class="desc">
+                Developed backend ingestion services processing <strong>5,000+</strong> daily events
+                feeding downstream ML recommendation workflows. Optimized processing logic and reduced
+                response latency by <strong>40%</strong>.
+              </p>
+              <div class="tagrow">
+                <span class="pill p-blue">Backend</span>
+                <span class="pill p-teal">Ingestion</span>
+                <span class="pill p-gold">Recommendation Systems</span>
+              </div>
+            </div>
+          </div>
+          <div class="entry-side">
+            <div>Dec 2023 - Jul 2024</div>
+            <div>Bangalore, India</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="education">
+        <h2 class="page-title reveal" data-reveal="fade-up">Education</h2>
+        <div class="title-rule"></div>
+        <p class="page-desc reveal" data-reveal="fade-up" data-delay="80">
+          Graduate work in information systems and a computer science foundation.
+        </p>
+
+        <div class="entry reveal" data-reveal="fade-up">
+          <div class="entry-main">
+            <div class="logo logo-neu" aria-hidden="true">N</div>
+            <div>
+              <h3>Northeastern University</h3>
+              <p class="post">MS Information Systems</p>
+              <p class="desc">
+                Coursework: Data Science Engineering Methods and Tools, Program Structure and Algorithms.
+              </p>
+            </div>
+          </div>
+          <div class="entry-side">
+            <div>May 2026</div>
+            <div>Austin, TX</div>
+          </div>
+        </div>
+
+        <div class="entry reveal" data-reveal="fade-up" data-delay="80">
+          <div class="entry-main">
+            <div class="logo logo-rns" aria-hidden="true">RNS</div>
+            <div>
+              <h3>RNS Institute of Technology</h3>
+              <p class="post">BE Computer Science</p>
+              <p class="desc">
+                Coursework: Artificial Intelligence and Machine Learning, Big Data Analytics,
+                Statistical Modeling.
+              </p>
+            </div>
+          </div>
+          <div class="entry-side">
+            <div>June 2023</div>
+            <div>Bangalore, India</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="skills">
+        <h2 class="page-title reveal" data-reveal="fade-up">Skills</h2>
+        <div class="title-rule"></div>
+        <p class="page-desc reveal" data-reveal="fade-up" data-delay="80">
+          Tools and areas I use to build reliable ML and data systems.
+        </p>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal" data-reveal="fade-up" style="--sc:var(--a-about)">
+            <h3>Machine Learning</h3>
+            <div class="chips">
+              <span class="schip"><span class="dot"></span>Supervised Learning</span>
+              <span class="schip"><span class="dot"></span>Feature Engineering</span>
+              <span class="schip"><span class="dot"></span>Model Evaluation</span>
+              <span class="schip"><span class="dot"></span>Experimentation</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" data-reveal="fade-up" data-delay="80" style="--sc:var(--a-work)">
+            <h3>Deep Learning &amp; GenAI</h3>
+            <div class="chips">
+              <span class="schip"><span class="dot"></span>PyTorch</span>
+              <span class="schip"><span class="dot"></span>TensorFlow</span>
+              <span class="schip"><span class="dot"></span>Transformers</span>
+              <span class="schip"><span class="dot"></span>RAG</span>
+              <span class="schip"><span class="dot"></span>NLP</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" data-reveal="fade-up" data-delay="160" style="--sc:var(--a-skills)">
+            <h3>Data Engineering</h3>
+            <div class="chips">
+              <span class="schip"><span class="dot"></span>ETL/ELT</span>
+              <span class="schip"><span class="dot"></span>Feature Pipelines</span>
+              <span class="schip"><span class="dot"></span>Data Modeling</span>
+              <span class="schip"><span class="dot"></span>Validation</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" data-reveal="fade-up" data-delay="240" style="--sc:var(--a-projects)">
+            <h3>Languages &amp; Infra</h3>
+            <div class="chips">
+              <span class="schip"><span class="dot"></span>Python</span>
+              <span class="schip"><span class="dot"></span>SQL</span>
+              <span class="schip"><span class="dot"></span>C++</span>
+              <span class="schip"><span class="dot"></span>AWS</span>
+              <span class="schip"><span class="dot"></span>Docker</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="projects">
+        <h2 class="page-title reveal" data-reveal="fade-up">Projects</h2>
+        <div class="title-rule"></div>
+        <p class="page-desc reveal" data-reveal="fade-up" data-delay="80">
+          Projects across generative AI, applied ML, deep learning, and the data systems behind them.
+        </p>
+
+        <article class="proj reveal" data-reveal="fade-up">
+          <div class="proj-head">
+            <h3>ReviewPulse AI <span class="feat-flag">Featured</span></h3>
+            <div class="proj-meta">
+              <a href="https://github.com/BigDataIA-Spring26-Team-1/reviewpulse-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
           <p>
-            Projects across generative AI, applied ML, deep learning, and the data systems behind them.
+            RAG system that ingests reviews from multiple platforms, enriches them with sentiment and
+            aspect signals, and powers semantic search plus a grounded conversational assistant.
           </p>
-        </div>
-      </div>
-
-      <div class="container project-grid">
-        <article class="project-card reveal" data-reveal="fade-up">
-          <span class="project-type">Generative AI</span>
-          <h3>ReviewPulse AI</h3>
-          <p>RAG system that ingests reviews from multiple platforms, enriches them with sentiment and aspect signals, and powers semantic search plus a grounded conversational assistant over the results.</p>
-          <div class="tags" aria-label="Technologies">
-            <span>RAG</span><span>NLP</span><span>FastAPI</span><span>PySpark</span>
+          <div class="tagrow">
+            <span class="pill p-indigo">RAG</span>
+            <span class="pill p-blue">NLP</span>
+            <span class="pill p-teal">FastAPI</span>
+            <span class="pill p-gold">PySpark</span>
           </div>
-          <a href="https://github.com/BigDataIA-Spring26-Team-1/reviewpulse-ai" target="_blank" rel="noopener noreferrer">View GitHub</a>
         </article>
 
-        <article class="project-card reveal" data-reveal="fade-up" data-delay="100">
-          <span class="project-type">Applied ML</span>
-          <h3>Health Assistant</h3>
-          <p>ML-powered health assistant application designed to support prediction workflows with clean data pipelines.</p>
-          <div class="tags" aria-label="Technologies">
-            <span>Python</span><span>Machine Learning</span><span>Data</span>
+        <article class="proj reveal" data-reveal="fade-up" data-delay="80">
+          <div class="proj-head">
+            <h3>Health Assistant</h3>
+            <div class="proj-meta">
+              <a href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
-          <a href="https://github.com/Ayush0315/Health_Assistant" target="_blank" rel="noopener noreferrer">View GitHub</a>
-        </article>
-
-        <article class="project-card reveal" data-reveal="fade-up" data-delay="200">
-          <span class="project-type">Deep Learning</span>
-          <h3>CIAGAN-DisCo</h3>
-          <p>Deep generative modeling project focused on disentanglement and anonymization for privacy-preserving learning.</p>
-          <div class="tags" aria-label="Technologies">
-            <span>Deep Learning</span><span>GAN</span><span>Privacy</span>
-          </div>
-          <a
-            href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View GitHub
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section skills-section" id="skills">
-      <div class="container section-heading narrow reveal" data-reveal="fade-up">
-        <p class="section-kicker">Skills</p>
-        <h2>Tools I use to build and ship ML systems.</h2>
-      </div>
-
-      <div class="container skills-grid">
-        <article class="skill-card reveal" data-reveal="fade-up">
-          <h3>Machine Learning</h3>
-          <p>Supervised &amp; unsupervised learning, feature engineering, model training, evaluation</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="80">
-          <h3>Deep Learning &amp; GenAI</h3>
-          <p>PyTorch, TensorFlow, Transformers, GANs, NLP, Retrieval-Augmented Generation</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="160">
-          <h3>Languages</h3>
-          <p>Python, SQL, C++</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="240">
-          <h3>Data &amp; Pipelines</h3>
-          <p>ETL/ELT, feature pipelines, data modeling, validation, large-scale SQL analysis</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="320">
-          <h3>Cloud &amp; MLOps</h3>
-          <p>AWS S3, Redshift, Docker, Linux, CI/CD, reproducible workflows</p>
-        </article>
-        <article class="skill-card reveal" data-reveal="fade-up" data-delay="400">
-          <h3>Strengths</h3>
-          <p>Experimentation, model evaluation, documentation, collaboration</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-card reveal" data-reveal="fade-up">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Let&rsquo;s connect about AI/ML engineering roles.</h2>
           <p>
-            Based in Austin, TX and available for opportunities where applied machine learning,
-            generative AI, and model quality matter.
+            ML-powered health assistant application designed to support prediction workflows with clean
+            data pipelines.
           </p>
-        </div>
+          <div class="tagrow">
+            <span class="pill p-blue">Python</span>
+            <span class="pill p-teal">Machine Learning</span>
+            <span class="pill p-slate">Data</span>
+          </div>
+        </article>
 
-        <div class="contact-list">
+        <article class="proj reveal" data-reveal="fade-up" data-delay="160">
+          <div class="proj-head">
+            <h3>CIAGAN-DisCo</h3>
+            <div class="proj-meta">
+              <a
+                href="https://github.com/Ayushrpatil/CIAGAN-DisCo-Disentanglement-and-Anonymization-with-Deep-Generative-Models"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+          <p>
+            Deep generative modeling project focused on disentanglement and anonymization for
+            privacy-preserving learning.
+          </p>
+          <div class="tagrow">
+            <span class="pill p-indigo">Deep Learning</span>
+            <span class="pill p-pink">GAN</span>
+            <span class="pill p-slate">Privacy</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="page" id="contact">
+        <h2 class="page-title reveal" data-reveal="fade-up">Contact</h2>
+        <div class="title-rule"></div>
+        <p class="page-desc reveal" data-reveal="fade-up" data-delay="80">
+          Based in Austin, TX and available for AI/ML engineering, applied ML, and data systems roles.
+        </p>
+
+        <div class="contact-list reveal" data-reveal="fade-up" data-delay="120">
           <a href="mailto:patil.ay@northeastern.edu">patil.ay@northeastern.edu</a>
           <a href="tel:+18573973023">+1 (857) 397-3023</a>
-          <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ayushrpatil" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayushrpatil</a>
+          <a href="https://github.com/ayush0315" target="_blank" rel="noopener noreferrer">github.com/ayush0315</a>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Ayush Patil. Built with GitHub Pages.</p>
-    </div>
-  </footer>
+    <footer>
+      <div class="fi">&copy; <span id="year"></span> Ayush Patil. Built with GitHub Pages.</div>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
