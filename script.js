@@ -6,6 +6,13 @@ if (yearEl) {
 
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const navLinks = document.getElementById("navLinks");
+const profilePhoto = document.querySelector("[data-profile-photo]");
+
+if (profilePhoto) {
+  profilePhoto.addEventListener("error", () => {
+    profilePhoto.hidden = true;
+  });
+}
 
 if (hamburgerBtn && navLinks) {
   hamburgerBtn.addEventListener("click", () => {
