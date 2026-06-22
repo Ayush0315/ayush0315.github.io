@@ -52,9 +52,10 @@
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-copy reveal" data-reveal="fade-up">
+        <div class="hero-copy reveal" data-reveal="fade-up" data-delay="80">
           <p class="eyebrow">Austin, TX &bull; Machine Learning &bull; AI</p>
           <h1>Machine learning <span class="accent">engineer</span>.</h1>
+
           <p class="hero-lede">
             I design and ship ML and generative-AI systems &mdash; from feature pipelines and model
             training to retrieval-augmented generation and evaluation &mdash; turning raw data into
@@ -165,17 +166,31 @@
       <div class="container feature-grid">
         <article class="feature-card reveal" data-reveal="fade-up">
           <span class="card-label">Education</span>
-          <h3>Northeastern University</h3>
-          <p>MS Information Systems <span class="muted">(May 2026)</span></p>
-          <p class="muted">
-            Coursework: Data Science Engineering Methods and Tools, Program Structure and Algorithms
-          </p>
-          <div class="divider"></div>
-          <h3>RNS Institute of Technology</h3>
-          <p>BE Computer Science <span class="muted">(June 2023)</span></p>
-          <p class="muted">
-            Coursework: Artificial Intelligence and Machine Learning, Big Data Analytics, Statistical Modeling
-          </p>
+          <div class="education-list">
+            <div class="institution-row">
+              <div class="org-logo logo-neu" aria-hidden="true">N</div>
+              <div>
+                <h3>Northeastern University</h3>
+                <p>MS Information Systems <span class="muted">(May 2026)</span></p>
+                <p class="muted">
+                  Coursework: Data Science Engineering Methods and Tools, Program Structure and Algorithms
+                </p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="institution-row">
+              <div class="org-logo logo-rns" aria-hidden="true">RNS</div>
+              <div>
+                <h3>RNS Institute of Technology</h3>
+                <p>BE Computer Science <span class="muted">(June 2023)</span></p>
+                <p class="muted">
+                  Coursework: Artificial Intelligence and Machine Learning, Big Data Analytics, Statistical Modeling
+                </p>
+              </div>
+            </div>
+          </div>
         </article>
 
         <article class="feature-card reveal" data-reveal="fade-up" data-delay="100">
@@ -206,8 +221,13 @@
         <article class="timeline-item reveal" data-reveal="fade-up">
           <div class="timeline-date">Aug 2025 &ndash; Dec 2025</div>
           <div class="timeline-body">
-            <h3>Chainwise CPA &mdash; Data Science &amp; ML Intern</h3>
-            <p class="meta">Boston, MA</p>
+            <div class="role-heading">
+              <div class="org-logo logo-chainwise" aria-hidden="true">CW</div>
+              <div>
+                <h3>Chainwise CPA &mdash; Data Science &amp; ML Intern</h3>
+                <p class="meta">Austin, TX</p>
+              </div>
+            </div>
             <ul>
               <li>Built automated data and feature pipelines from multi-source data to power analytics and ML workflows, improving efficiency by <b>45%</b>.</li>
               <li>Engineered standardized datasets, validation rules, and quality checks to produce reliable training and analytics data.</li>
@@ -220,8 +240,13 @@
         <article class="timeline-item reveal" data-reveal="fade-up" data-delay="100">
           <div class="timeline-date">Jan 2025 &ndash; Apr 2025</div>
           <div class="timeline-body">
-            <h3>Northeastern University &mdash; Research Assistant, Applied ML &amp; Data Systems</h3>
-            <p class="meta">Boston, MA</p>
+            <div class="role-heading">
+              <div class="org-logo logo-neu" aria-hidden="true">N</div>
+              <div>
+                <h3>Northeastern University &mdash; Research Assistant, Applied ML &amp; Data Systems</h3>
+                <p class="meta">Austin, TX</p>
+              </div>
+            </div>
             <ul>
               <li>Built scalable Python data and feature-processing pipelines for noisy semi-structured datasets, reducing runtime by <b>40%</b>.</li>
               <li>Analyzed <b>3,000+</b> records with EDA and statistical methods to engineer features and generate modeling insights.</li>
@@ -233,8 +258,13 @@
         <article class="timeline-item reveal" data-reveal="fade-up" data-delay="200">
           <div class="timeline-date">Dec 2023 &ndash; Jul 2024</div>
           <div class="timeline-body">
-            <h3>Dhanyath Technologies &mdash; Software Engineering Intern</h3>
-            <p class="meta">Bangalore, India</p>
+            <div class="role-heading">
+              <div class="org-logo logo-dhanyath" aria-hidden="true">DT</div>
+              <div>
+                <h3>Dhanyath Technologies &mdash; Software Engineering Intern</h3>
+                <p class="meta">Bangalore, India</p>
+              </div>
+            </div>
             <ul>
               <li>Developed backend ingestion services processing <b>5,000+</b> daily events feeding downstream ML recommendation workflows.</li>
               <li>Optimized processing logic for ML recommendation workflows, reducing response latency by <b>40%</b>.</li>
